@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pacote.BarMainController">
+   <center>
+      <VBox fx:id="Tela" alignment="CENTER" fillWidth="false" prefHeight="200.0" prefWidth="160.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnVenda" alignment="CENTER" contentDisplay="CENTER" layoutX="130.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleAbrirTelaVenda" prefHeight="25.0" prefWidth="117.0" text="Vendas" textAlignment="CENTER" />
+            <Button fx:id="btnEstoque" alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleAbrirTelaEstoque" prefWidth="117.0" text="Estoque" textAlignment="CENTER" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

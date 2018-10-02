@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pacote.BarVendaController">
+   <top>
+      <Pane prefHeight="73.0" prefWidth="475.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="17.0" text="Comanda" />
+            <TextField fx:id="txtComanda" layoutX="14.0" layoutY="33.0" prefHeight="25.0" prefWidth="90.0" />
+            <TextField fx:id="txtData" editable="false" layoutX="127.0" layoutY="32.0" prefHeight="26.0" prefWidth="149.0" />
+            <Label layoutX="127.0" layoutY="16.0" prefHeight="6.0" prefWidth="34.0" text="Data" />
+            <Button fx:id="btnConsultaVenda" layoutX="327.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleAbrirTelaConsultaVenda" prefHeight="29.0" prefWidth="115.0" text="Consultar vendas" />
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="279.0" prefWidth="475.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabelaItens" layoutX="14.0" layoutY="66.0" prefHeight="155.0" prefWidth="290.0">
+              <columns>
+                <TableColumn fx:id="clmProduto" prefWidth="152.0" text="Produto" />
+                  <TableColumn fx:id="clmQtd" prefWidth="75.0" text="Quantidade" />
+                  <TableColumn fx:id="clmPreco" prefWidth="62.0" text="Preço" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnAddProduto" layoutX="329.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleAddProduto" text="Adicionar produto" />
+            <TextField fx:id="txtTotal" editable="false" layoutX="337.0" layoutY="106.0" prefHeight="25.0" prefWidth="85.0" />
+            <Label layoutX="337.0" layoutY="89.0" text="Total" />
+            <TextField fx:id="txtQtd" layoutX="191.0" layoutY="14.0" prefHeight="24.0" prefWidth="90.0" />
+            <Label layoutX="191.0" layoutY="-3.0" text="Quantidade" />
+            <Button fx:id="btnRegistrarVenda" layoutX="335.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleRegistrarVenda" prefHeight="25.0" prefWidth="111.0" text="Registrar Venda" />
+            <ComboBox fx:id="cbListaProduto" layoutX="14.0" layoutY="14.0" prefWidth="150.0" />
+            <Label layoutX="14.0" layoutY="-3.0" text="Lista de produtos" />
+            <Button fx:id="btnExcluirProduto" layoutX="329.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleExcluirProduto" prefHeight="25.0" prefWidth="114.0" text="Excluir produto" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

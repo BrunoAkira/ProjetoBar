@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pacote.BarHistoricoController">
+   <top>
+      <Pane prefHeight="64.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" text="Filtro" />
+            <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="20.0" promptText="Por Comanda ou Data" />
+            <Button fx:id="btnPesquisar" layoutX="228.0" layoutY="20.0" mnemonicParsing="false" onAction="#handlePesquisar" prefHeight="25.0" prefWidth="87.0" text="Pesquisar" />
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <TreeTableView prefHeight="336.0" prefWidth="299.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TreeTableColumn fx:id="clmComanda" prefWidth="75.0" text="Comanda" />
+            <TreeTableColumn fx:id="clmData" prefWidth="96.0" text="Data" />
+            <TreeTableColumn fx:id="clmProdutos" prefWidth="131.0" text="Produtos" />
+          <TreeTableColumn fx:id="clmPrecoVenda" prefWidth="109.0" text="Preço da Venda" />
+        </columns>
+      </TreeTableView>
+   </center>
+   <bottom>
+      <Pane prefHeight="26.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnExcluirVenda" layoutX="13.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleExcluirVenda" text="Excluir Venda" />
+            <Button fx:id="btnSalvarAlteracoes" layoutX="109.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleSalvarAlteracoes" text="Salvar Alterações" />
+            <Label layoutX="343.0" layoutY="5.0" text="Lucro: " />
+            <ComboBox layoutX="228.0" layoutY="1.0" prefHeight="25.0" prefWidth="73.0" promptText="Mês " />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

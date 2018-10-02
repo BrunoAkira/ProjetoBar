@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pacote.BarProdutoController">
+   <center>
+      <TableView fx:id="tabelaProduto" editable="true" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="clmProduto" prefWidth="161.0" text="Produto" />
+          <TableColumn fx:id="clmPreco" prefWidth="63.0" text="Preço" />
+            <TableColumn fx:id="clmQuantidade" prefWidth="75.0" text="Quantidade" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#handleSalvarAlteracoes" text="Salvar alterações" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

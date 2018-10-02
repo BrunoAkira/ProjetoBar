@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pacote.BarEstoqueController">
+   <top>
+      <AnchorPane prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Pesquisar" />
+            <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="31.0" prefHeight="25.0" prefWidth="174.0" />
+            <Button fx:id="btnPesquisar" layoutX="388.0" layoutY="31.0" mnemonicParsing="false" onAction="#handlePesquisarProduto" text="Pesquisar" />
+            <Button fx:id="btnConsultarPreco" layoutX="481.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleAbrirTelaPreco" text="Consultar preços" />
+            <ComboBox fx:id="cbFiltro" layoutX="199.0" layoutY="31.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <TableView fx:id="tabelaEstoque" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="clmDescricao" prefWidth="75.0" text="Lote" />
+            <TableColumn fx:id="clmProduto" prefWidth="100.0" text="Produto" />
+            <TableColumn fx:id="clmQuantidade" prefWidth="75.0" text="Quantidade" />
+          <TableColumn fx:id="clmValidade" prefWidth="75.0" text="Validade" />
+            <TableColumn fx:id="clmFonecedor" prefWidth="75.0" text="Fornecedor" />
+            <TableColumn fx:id="clmTotal" prefWidth="75.0" text="Valor Total" />
+            <TableColumn fx:id="clmData" prefWidth="75.0" text="Data" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <Pane prefHeight="48.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnSalvar" layoutX="404.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleSalvarAlteracoes" text="Salvar alterações" />
+            <Button fx:id="btnAdicionarLote" layoutX="91.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleAdicionarLote" text="Adicionar Lote" />
+            <Button fx:id="btnExcluirLote" layoutX="248.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleExcluirLote" text="Excluir Lote" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
